@@ -1,0 +1,20 @@
+{
+	"name": "korpstation blog",
+	"image": "mcr.microsoft.com/devcontainers/jekyll:2-bullseye",
+
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"oderwat.indent-rainbow",
+				"vscode-icons-team.vscode-icons",
+				"bierner.markdown-mermaid",
+				"GitHub.vscode-github-actions",
+				"davidanson.vscode-markdownlin"
+			]
+		}
+	},
+
+	"postStartCommand": "bundle exec jekyll server --livereload --draft --incremental --force-polling",
+
+	"remoteUser": "root"
+}
