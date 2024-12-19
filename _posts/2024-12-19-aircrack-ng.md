@@ -1,5 +1,5 @@
 ---
-title: Aircrack-ng WIFI WPA2 Handshake Crack
+title: Aircrack-NG Crack WIFI WPA2 Password
 time: 2024-12-19 12:00:00
 categories: [Hacking]
 tags: [kali,wifi,hack,cybersecurity]
@@ -11,34 +11,29 @@ image: /assets/posts/WiFi/aircrack.jpg
 > **ATTENTION :** Ce guide est strictement à des fins éducatives et professionnelles.
 
 
-## 🚀 Wifite  
+## 🚀 Aircrack-NG 
 
 
 -------------------
 
-## 🎯 Introduction
-> "La simplicité est la sophistication suprême" - Leonardo da Vinci
+## 🎯 Préréquis
+>  Un ordinateur portable
 
-Dans ce guide, nous allons explorer l'approche wifite pour hacker le mot de passe d'un WiFi 
+>  Hyperviseur (VMWare ou Virtualbox)
+
+>  Adaptateur Wifi 
+
+>  Votre propre point d'acès WIFI que vous avez le droit de pirater 
 
 -------------------
 
 
-### 🎁 Points Forts de Wifite
-```text
-✓ Installation Simple
-✓ Interface Unifiée
-✓ Automatisation 
-✓ Parfait pour Débuter
-```
+## 🛠️ Préparation de l'environnement
 
-## 🛠️ INSTALLATION
 
-## 🪟 Windows 
+#### Le lien pour télécharger la machine virtuelle Kali linux.
 
-#### La vidéo suivante détaille très bien l'installation du terminal Kali linux et wifite tool sur Windows 
-
-> [Lien de la vidéo](https://yandex.ru/video/preview/9274311233078759956)
+> [Kali Virtual Machine](https://www.kali.org/get-kali/#kali-virtual-machines)
 
 
 ## 🐧 Linux 
