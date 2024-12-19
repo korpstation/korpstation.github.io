@@ -7,7 +7,7 @@ image: /assets/posts/WiFi/wifi.png
 ---
 
 
-# 🌐 Atlas des Attaques WiFi : Comprendre pour Mieux Protéger
+# 🌐 Attaques WiFi : Comprendre pour Mieux Protéger
 
 ## 🚨 Préambule Éthique
 
