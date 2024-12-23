@@ -2,7 +2,7 @@
 title: Backdoor 2024 - Writeups
 time: 2024-12-23 18:00:00
 categories: [ctf]
-tags: [web,forensic,crypto]
+tags: [web,forensic]
 image: /assets/posts/backdoorctf2024/icon.png
 ---
 
