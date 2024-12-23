@@ -1,5 +1,5 @@
 ---
-title: Backdoor 2024 - Writeups
+title: Backdoor CTF 2024 - Writeups
 time: 2024-12-23 18:00:00
 categories: [ctf]
 tags: [web,forensic]
@@ -221,3 +221,52 @@ Après plusieurs essaies j'ai utilisé ce payload pour avoir le flag :
 
 
 ![flag](/assets/posts/backdoorctf2024/flag.png)
+
+##  Cursed Credential [Forensic] 46 Solves
+
+``Description``: I forgot my Browser's saved password although a friend of mine tells that I can find it if I know my master key. The problem is I dont even remember that, hopefully you can rock your brain and help me out.
+
+``File`` : [chal.zip](/assets/posts/backdoorctf2024/chal.zip)
+
+``Flag`` : `flag{n0_p@ssw0rd_15_s3cur3??}`
+
+En décompressant l'archive, nous avons trois fichiers [cert9.db](/assets/posts/backdoorctf2024/cert9.db), [ke4.dby](/assets/posts/backdoorctf2024/key4.db) et [logins.json](/assets/posts/backdoorctf2024/logins.json). Je n'étais pas encore tombé sur ce genre de ctf auparavant. Que peut-on d'abord retenir de la description du défi : 
+
+1. Nous avons affaire à des bases de données de mots de passe d'un navigateur 
+   
+2. Nous n'avons pas accès au master key 
+   
+3. Le défi mentionne ``rock`` on aura donc à utiliser le dictionnaire rockyou 
+
+Armez de ces informations je me suis tourné vers google. J'ai alors trouvé qu'il s'aggisait d'une base de données de mots de passe Mozilla Firefox. 
+
+Nous devons d'abord extraire le hash de la bd pour qu'il soit reconnu par john ou hashcat. J'ai trouvé cet outil en ligne [mozilla2hashcat.py](https://fossies.org/linux/hashcat/tools/mozilla2hashcat.py)
+
+```bash 
+┌──(kali㉿korpstation)-[~/…/Forensic/cursed/chal/7glfqj3r.default-release]
+└─$ python mozilla2hashcat.py .
+$mozilla$*AES*3510a742f59b198e198922f0c9bc43cf8ab52bf3*dadd3df784b946b13619b7f09fdce2e7a34e3e0cd4069263a0517d683d003695*10000*040e6bb3481d3086ee025f5b4b5b0afb*9c55609a7548c032b1bee0a1d948cec5
+  
+```
+
+J'ai ensuite utlisé hashcat pour cracker la sortie à l'aide de rockyou. Après un certain moment j'ai eu le password 
+
+```bash
+$mozilla$*AES*3510a742f59b198e198922f0c9bc43cf8ab52bf3*dadd3df784b946b13619b7f09fdce2e7a34e3e0cd4069263a0517d683d003695*10000*040e6bb3481d3086ee025f5b4b5b0afb*9c55609a7548c032b1bee0a1d948cec5:phoenixthefirebird14
+
+Password: phoenixthefirebird14
+```
+
+Et on utilise enfin 
+
+```bash 
+┌──(kali㉿korpstation)-[~/CTF/Tools/firefox_decrypt]
+└─$ python firefox_decrypt.py ../../BackdoorCTF/Forensic/cursed/chal/7glfqj3r.default-release 
+
+Primary Password for profile ../../BackdoorCTF/Forensic/cursed/chal/7glfqj3r.default-release: 
+
+Website:   https://play.picoctf.org
+Username: '4n0nym0u5'
+Password: 'flag{n0_p@ssw0rd_15_s3cur3??}'
+```
+
