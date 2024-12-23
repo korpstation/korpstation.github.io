@@ -202,7 +202,7 @@ J'ai utilisé le nouveau jwt et j'ai réussi à me connecter en tant qu'admin.
 ![admin](/assets/posts/backdoorctf2024/adminprofile.png)
 ![admin2](/assets/posts/backdoorctf2024/paneladmin.png)
 
-Je pensais avoir fini avec ce défi mais c'était un trop de lapin. Le flag sur la page d'administration `flag{d0_y0u_r34lly_th1nk_th15_is_th3_r34l_fl4g}` est fake. 
+Je pensais avoir fini avec ce défi mais c'était un trou de lapin. Le flag sur la page d'administration `flag{d0_y0u_r34lly_th1nk_th15_is_th3_r34l_fl4g}` est fake. 
 
 Il est temps de se pencher sur les autres routes que gobuster nous a énumérés. En analysant la route `/support`
 avec quelques exploits j'ai vu une vulnérabilité ssti. 
