@@ -257,7 +257,7 @@ $mozilla$*AES*3510a742f59b198e198922f0c9bc43cf8ab52bf3*dadd3df784b946b13619b7f09
 Password: phoenixthefirebird14
 ```
 
-Et on utilise enfin 
+Et on utilise enfin ``firefox_decrypt.py`` pour décrypter le mot de passe 
 
 ```bash 
 ┌──(kali㉿korpstation)-[~/CTF/Tools/firefox_decrypt]
