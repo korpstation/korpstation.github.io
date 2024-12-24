@@ -249,7 +249,7 @@ $mozilla$*AES*3510a742f59b198e198922f0c9bc43cf8ab52bf3*dadd3df784b946b13619b7f09
   
 ```
 
-J'ai ensuite utlisé hashcat pour cracker la sortie à l'aide de rockyou. Après un certain moment j'ai eu le password 
+J'ai ensuite utlisé hashcat pour cracker la sortie à l'aide de rockyou. Après quelques heures j'ai eu le password 
 
 ```bash
 $mozilla$*AES*3510a742f59b198e198922f0c9bc43cf8ab52bf3*dadd3df784b946b13619b7f09fdce2e7a34e3e0cd4069263a0517d683d003695*10000*040e6bb3481d3086ee025f5b4b5b0afb*9c55609a7548c032b1bee0a1d948cec5:phoenixthefirebird14
@@ -269,4 +269,6 @@ Website:   https://play.picoctf.org
 Username: '4n0nym0u5'
 Password: 'flag{n0_p@ssw0rd_15_s3cur3??}'
 ```
+
+
 
