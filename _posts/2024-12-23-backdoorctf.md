@@ -230,7 +230,7 @@ Après plusieurs essaies j'ai utilisé ce payload pour avoir le flag :
 
 ``Flag`` : `flag{n0_p@ssw0rd_15_s3cur3??}`
 
-En décompressant l'archive, nous avons trois fichiers [cert9.db](/assets/posts/backdoorctf2024/cert9.db), [ke4.dby](/assets/posts/backdoorctf2024/key4.db) et [logins.json](/assets/posts/backdoorctf2024/logins.json). Je n'étais pas encore tombé sur ce genre de ctf auparavant. Que peut-on d'abord retenir de la description du défi : 
+En décompressant l'archive, nous avons trois fichiers [cert9.db](/assets/posts/backdoorctf2024/cert9.db), [ke4.dby](/assets/posts/backdoorctf2024/key4.db) et [logins.json](/assets/posts/backdoorctf2024/logins.json). Je n'étais pas encore tombé sur ce genre de défi auparavant. Que peut-on d'abord retenir de la description du défi : 
 
 1. Nous avons affaire à des bases de données de mots de passe d'un navigateur 
    
