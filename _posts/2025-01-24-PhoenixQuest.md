@@ -263,5 +263,5 @@ trailer
                                                                                 
 ┌──(kali㉿korpstation)-[~/CTF/Phoenix Quest/Step4]
 └─$ echo "RkxBR3t0cnV0aF9pbl9hc2hlc19maW5hbF84MDI1Njg0MTAyNX0NCg==" | base64 -d
-FLAG{truth_in_ashes_final_80256841025}
+FLAG{truth_in_ashes_final_80256841025 } 
 ```
