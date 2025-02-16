@@ -2,14 +2,15 @@
 title: Inscription au Phoenix Quest - Writeups
 time: 2025-01-24 18:00:00
 categories: [ctf]
-tags: [web,crypto,stegano,forensic]
+tags: [web,crypto,stegano,forensic,Network]
 image: /assets/posts/phoenix/icon.png
 ---
 
-Mes writeups pour les 4 challenges proposés lors de l'Inscription au Phoenix Quest
+Mes writeups pour les challenges que j'ai résolu  lors de la final Phoenix Quest. 
 
-## Étape 1 : L'Éveil du Phénix [Web] 
+## Forensic 
 
+### L'Éveil du Phénix 
 On nous sommets à une page de connexion sans aucune information supplémentaire. 
 
 ![step1](/assets/posts/phoenix/step1.png)
@@ -263,5 +264,5 @@ trailer
                                                                                 
 ┌──(kali㉿korpstation)-[~/CTF/Phoenix Quest/Step4]
 └─$ echo "RkxBR3t0cnV0aF9pbl9hc2hlc19maW5hbF84MDI1Njg0MTAyNX0NCg==" | base64 -d
-FLAG{truth_in_ashes_final_80256841025} 
+FLAG{truth_in_ashes_final_80256841025 } 
 ```
