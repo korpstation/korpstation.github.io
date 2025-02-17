@@ -203,7 +203,3 @@ jekyll-archives:
     tag: /tags/:name/
     category: /categories/:name/
 
-htmlproofer:
-  ignore_urls:
-    - "http://thephoenixquest.acxsit.com:30000/"
-    - "http://thephoenixquest.acxsit.com:30150/"
