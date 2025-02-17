@@ -1,6 +1,6 @@
 ---
 title: Final Phoenix Quest - Writeups
-time: 2025-01-24 18:00:00
+time: 2025-02-17 12:00:00 
 categories: [ctf]
 tags: [web,crypto,stegano,forensic,Network,misc]
 image: /assets/posts/phoenix/icon.png
