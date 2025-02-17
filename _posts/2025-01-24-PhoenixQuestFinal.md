@@ -8,8 +8,8 @@ image: /assets/posts/phoenix/icon.png
 
 Mes writeups pour les challenges que j'ai résolu lors de la final du Phoenix Quest. 
 
-``Forensic``  
-# Headers 
+# Forensic
+## Headers 
 
 ![headers](/assets/posts/finalphoenix/header.png)
 
@@ -58,7 +58,7 @@ TPQCTF{on_4_t0urn3_13_f01x_la_I4n93}
 ```
 ``Flag`` : `TPQCTF{on_4_t0urn3_13_f01x_la_I4n93}` 
 
-# Enterprise Network
+## Enterprise Network
    
 ![network](/assets/posts/finalphoenix/entreprise.png)
 
@@ -87,7 +87,7 @@ TDNS Query for https://pastebin.com/f1G8aTBX
 ```
 ``Flag`` : `TPQCTF{1nt3rnet_1s_n0t_s0_s4f3}` 
 
-# Army 
+## Army 
 
 ![army](/assets/posts/finalphoenix/army.png)
 
@@ -109,10 +109,9 @@ Bref passons à la résolution. En suivant ce processus jusqu'à la fin (C'étai
 
 ``Flag`` : `TPQCTF{Bravo_Mission_canceled}` 
 
+# Misc  
 
-``Misc``  
-
-# Welcome Players
+## Welcome Players
 
 ![welcome](/assets/posts/finalphoenix/welcome.png)
 
@@ -133,9 +132,10 @@ Type "help", "copyright", "credits" or "license" for more information.
 TPQCTF{W3lc0m3_t0_th3_jun9l3_pl4y3r}
 >>> 
 ```
-``Flag`` : `TPQCTF{W3lc0m3_t0_th3_jun9l3_pl4y3r}`
+`Flag` : `TPQCTF{W3lc0m3_t0_th3_jun9l3_pl4y3r}`
 
-# Dash dot dot dash
+
+## Dash dot dot dash
 
 ![dash](/assets/posts/finalphoenix/dash.png)
 
@@ -214,7 +214,7 @@ Message final décodé: TPQCTF{LE_CI3L_M3-P4RL3_3N_M0RC3}
 ```
 ``Flag`` : `TPQCTF{LE_CI3L_M3-P4RL3_3N_M0RC3}`
 
-# Image mystère 1
+## Image mystère 1
 
 ![mistere](/assets/posts/finalphoenix/mistere.png)
 
@@ -247,9 +247,9 @@ TPQCTF{!_l0v3_B3N!N_4v3r}
 ``Flag`` : `TPQCTF{!_l0v3_B3N!N_4v3r}`
 
 
-``Web``
+# Web
 
-# Rise from the Ashes
+## Rise from the Ashes
 
 ![Rise](/assets/posts/finalphoenix/Rise.png)
 
@@ -342,7 +342,7 @@ C'est possible de faire tout ceci en une seule commande
 
 ```Flag``` : ```TPQCTF{uni0n_4ttack_5uccessful}```
 
-# Phoenix Restaurant
+## Phoenix Restaurant
 
 ![restaurant](/assets/posts/finalphoenix/restaurant.png)
 
@@ -387,9 +387,9 @@ Une fois sur la page on a le flag.
  `Flag` : `TPQCTF{stored_xxs_attack_or_weak_cr3ds_4593}`
 
 
-``crypto`` 
+# crypto 
 
-# Les eclaireurs du roi 
+## Les eclaireurs du roi 
 
 ![eclaireur](/assets/posts/finalphoenix/eclaireur.png) 
 
@@ -400,7 +400,7 @@ Une fois sur la page on a le flag.
 
 ``Flag`` : `TPQCTF{3mper3ur_c35ar_r0m41n}`
 
-# SMS 
+## SMS 
 
 ![sms](/assets/posts/finalphoenix/sms.png) 
 
@@ -415,7 +415,7 @@ J'ai commencé par rechercher sms decode comme le nom du défi.
 `Flag`  : `TPQCTF{SMS_ENCODING_FUNNY_!!!}`
 
 
-# Triple menace 
+## Triple menace 
 
 ![triple](/assets/posts/finalphoenix/triple.png) 
 
@@ -529,3 +529,6 @@ L'exécution du script de solution nous donne le flag :
 
 
 
+# Reverse 
+
+##
