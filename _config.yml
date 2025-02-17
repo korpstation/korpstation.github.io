@@ -19,7 +19,7 @@ title: korpstation
 tagline: 驆ꍥ笠驲啥𒁔礠啍驍 # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
-  A blog about CTF writeups 
+  A blog about CTF writeups
 
 # Fill in the protocol & hostname for your site.
 # e.g. 'https://username.github.io', note that it does not end with a '/'.
@@ -202,3 +202,8 @@ jekyll-archives:
   permalinks:
     tag: /tags/:name/
     category: /categories/:name/
+
+htmlproofer:
+  ignore_urls:
+    - "http://thephoenixquest.acxsit.com:30000/"
+    - "http://thephoenixquest.acxsit.com:30150/"
