@@ -531,5 +531,129 @@ L'exécution du script de solution nous donne le flag :
 
 # Reverse 
 
-## En cours de rédaction
+## Le Code du Forgeron
 
+![forgeron](/assets/posts/finalphoenix/forgeron.png)
+
+``File`` : [keygen_forgeron](/assets/posts/finalphoenix/keygen_forgeron)
+
+On nous donne un exécutable ELF 64-bit LSB. 
+
+```bash 
+(myenv-3.10) ┌──(myenv-3.10)─(kali㉿korpstation)-[~/…/Phoenix Quest/Final/Rev/code]
+└─$ ./keygen_forgeron 
+🛠️ Forgeron : Entrez votre nom d'utilisateur : korpstation
+🔑 Clé générée : KEY-4BE-E3A
+🚫 Accès refusé ! Clé invalide.
+```
+J'ai ensuite décompiler le binaire avec Ghidra 
+
+### Fonction Main
+
+La fonction principale effectue les opérations suivantes :
+
+1. Initialise des variables 
+2. Demande une entrée à l'utilisateur
+3. Génère une clé à partir de cette entrée
+4. Vérifie si la clé générée correspond à "KEY-222-666"
+5. Si la clé est correcte, déchiffre et affiche le flag
+
+### Fonction generate_key
+
+```c
+void generate_key(char *param_1, char *param_2)
+{
+  size_t sVar1;
+  int local_20;
+  uint local_1c;
+  
+  local_1c = 0;
+  local_20 = 0;
+  while( true ) {
+    sVar1 = strlen(param_1);
+    if (sVar1 <= (ulong)(long)local_20) break;
+    local_1c = local_1c + (int)param_1[local_20];
+    local_20 = local_20 + 1;
+  }
+  sprintf(param_2,"KEY-%X-%X",local_1c,local_1c * 3);
+  return;
+}
+```
+
+Cette fonction:
+- Calcule la somme des valeurs ASCII de tous les caractères de l'entrée
+- Génère une clé au format "KEY-[somme]-[somme*3]" en hexadécimal
+
+### Solution
+
+### Analyse du Format de la Clé
+
+La clé cible est "KEY-222-666", ce qui signifie que:
+- La somme des caractères ASCII doit être 0x222 (546 en décimal)
+- La seconde partie (666) est simplement 0x222 * 3
+
+### Script de Résolution
+
+ `find_input()`: Génère une chaîne de caractères dont la somme ASCII égale 0x222
+```python
+def find_input():
+    target_sum = 0x222
+    base_char = ord('a')
+    num_chars = target_sum // base_char
+    remainder = target_sum % base_char
+    
+    input_str = 'a' * num_chars
+    if remainder > 0:
+        input_str += chr(remainder)
+    
+    return input_str
+```
+
+`verify_key()`: Vérifie que l'entrée génère bien la clé attendue
+```python
+def verify_key(input_str):
+    total = sum(ord(c) for c in input_str)
+    key = f"KEY-{total:X}-{total * 3:X}"
+    return key
+```
+
+`decrypt_flag()` : Déchiffre le flag en utilisant une opération XOR
+```python
+def decrypt_flag(encrypted_bytes):
+    flag_parts = [
+        0x19211c0e190b0a0e,
+        0x11053e6931391a28,
+        0x3b6f0534693d233f,
+        0x273f6e6b62686b6e
+    ]
+    
+    flag_bytes = b''
+    for part in flag_parts:
+        part_bytes = part.to_bytes(8, 'little')
+        flag_bytes += part_bytes
+    
+    decrypted = ''
+    for b in flag_bytes:
+        decrypted += chr(b ^ 0x5A)
+    
+    return decrypted
+```
+
+En exécutant le script on a le flag. 
+
+```bash 
+(myenv-3.10) ┌──(myenv-3.10)─(kali㉿korpstation)-[~/…/Phoenix Quest/Final/Rev/code]
+└─$ python solve.py 
+Input trouvé: aaaaa=
+Clé générée: KEY-222-666
+Flag déchiffré: TPQCTF{Cr@ck3d_Keyg3n_5a412814e}
+```
+
+`Flag` : `TPQCTF{Cr@ck3d_Keyg3n_5a412814e}`
+
+
+## Obfuscated Vault
+
+![vault](/assets/posts/finalphoenix/vault.png)
+
+``File`` : [vault](/assets/posts/finalphoenix/vault)
