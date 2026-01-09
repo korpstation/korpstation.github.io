@@ -5,7 +5,7 @@ date: 2025-01-01 09:00:00 +0100
 categories: [cybersécurité, phishing, tutoriel,sensibilisation]
 tags: [gophish, 2fa, authentification, sécurité, ubuntu, vps]
 author: korpstation
-image: /assets/images/episode-1-gophish-cover.jpg
+image: /assets/posts/gophish/2FA.jpeg
 toc: true
 ---
 
