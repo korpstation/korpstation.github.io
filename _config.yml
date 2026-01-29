@@ -16,7 +16,7 @@ timezone: Africa/Porto-Novo
 
 title: korpstation
 
-tagline: 驆ꍥ笠驲啥𒁔礠啍驍 # it will display as the sub-title
+tagline: 驆ꍥ笠驲啥𒁔礠啍驍 # (Base65536) it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   A blog about CTF writeups
