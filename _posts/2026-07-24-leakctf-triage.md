@@ -60,7 +60,7 @@ Les deux autres fichiers, `TG9jYWxl` et `VGV4dA==`, contiennent les données du 
 
 Au début je suis tombé sur [cette page de Passcape](https://www.passcape.com/index.php?page=1393) qui expliquait que Windows utilise le chiffrement (CNG) pour protéger l'historique épinglé et les données synchronisées. Mais c'était l'ancienne techno utilisée.
 
-En continuant dans mes recherches sur comment ces fichiers sont chiffrés, je suis tombé sur [Windows DPAPI Fundamentals](http://medium.com/@toneillcodes/windows-dpapi-fundamentals-69af5169ffe8) et [Decoding DPAPI Blobs](https://medium.com/@toneillcodes/decoding-dpapi-blobs-1ed9b4832cf6) (ce deuxième blog complète parfaitement le premier en expliquant la structure des fichiers chiffrés), qui détaillent très bien le fonctionnement de ce chiffrement.
+En continuant dans mes recherches sur comment ces fichiers sont chiffrés, je suis tombé sur [Windows DPAPI Fundamentals](https://medium.com/@toneillcodes/windows-dpapi-fundamentals-69af5169ffe8) et [Decoding DPAPI Blobs](https://medium.com/@toneillcodes/decoding-dpapi-blobs-1ed9b4832cf6) (ce deuxième blog complète parfaitement le premier en expliquant la structure des fichiers chiffrés), qui détaillent très bien le fonctionnement de ce chiffrement.
 
 Les blobs chiffrés par DPAPI commencent par la séquence d'octets suivante, ce qui permet de les repérer facilement :
 
