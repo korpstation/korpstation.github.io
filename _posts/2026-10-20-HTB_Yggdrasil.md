@@ -2,8 +2,8 @@
 title: HTB Sherlock - Yggdrasil
 time: 2026-10-21 09:00:00
 categories: [ctf]
-tags: [forensic, DFIR, linux, HTB, sherlock]
-image: /assets/posts/Yggdrasil/Q1.png
+tags: [forensic, DFIR, linux, HTB, sherlock, UAC Triage]
+image: /assets/posts/Yggdrasil/cover.png
 ---
 
 ## Forensic
