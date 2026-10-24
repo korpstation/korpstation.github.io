@@ -36,7 +36,7 @@ vol -f dump_srv.mem banners.Banners
 Linux version 6.8.0-87-generic (buildd@lcy02-amd64-034) (x86_64-linux-gnu-gcc-13 (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, GNU ld (GNU Binutils for Ubuntu) 2.42) #88-Ubuntu SMP PREEMPT_DYNAMIC Sat Oct 11 09:28:41 UTC 2025 (Ubuntu 6.8.0-87.88-generic 6.8.12)
 ```
 
-On a donc un **Ubuntu 24.04 (Noble)** avec le noyau **6.8.0-87-generic**.
+On a donc un **Ubuntu 24.04** avec le noyau **6.8.0-87-generic**.
 
 #### Étape 2 : retrouver les symboles de debug
 
