@@ -371,7 +371,6 @@ Sur les trois shells du C2 (2693, 2695, 2698), l'environnement est vide de tout 
 
 Le processus 2792 est un `bash` ouvert dans la session SSH de l'utilisateur non privilégié `workstation` (client `192.168.200.1:63600`, la machine victime identifié précedemment). `OPERATOR` n'est pas une variable standard et n'existe sur aucun autre processus du dump.
 
-
 Réponse : **access**
 
 ---
