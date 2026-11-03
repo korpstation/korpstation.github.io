@@ -3,7 +3,7 @@ title: HTB Sherlock - Stonks
 time: 2026-11-03 09:00:00
 categories: [ctf]
 tags: [forensic, DFIR, windows, HTB, sherlock, deduplication]
-image: /assets/posts/Stonks/ftk-start.png
+image: /assets/posts/Stonks/cover.png
 ---
 
 ## Forensic
